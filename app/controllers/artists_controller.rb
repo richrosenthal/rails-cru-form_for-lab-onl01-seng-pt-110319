@@ -4,9 +4,9 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.new(student_params(:name, :bio))
+    @artist = Artist.new(artist_params(:name, :bio))
     @artist.save
-    redirect_to student_path(@artist)
+    redirect_to artist_path(@artist)
   end
 
   def show
